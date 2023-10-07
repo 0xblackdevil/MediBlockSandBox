@@ -1,0 +1,113 @@
+{
+  "address": "0x7b19F67B8D74B8DC56E5b741Ca269E3B41de5262",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "enum UserContract.UserType",
+          "name": "_userType",
+          "type": "uint8"
+        },
+        {
+          "internalType": "string",
+          "name": "_licenseNumber",
+          "type": "string"
+        }
+      ],
+      "name": "createUser",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "userAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "licenseNumber",
+          "type": "bytes"
+        }
+      ],
+      "name": "DoctorVerified",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "userAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum UserContract.UserType",
+          "name": "userType",
+          "type": "uint8"
+        }
+      ],
+      "name": "UserCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "verificationProcess",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getUser",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "userAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "enum UserContract.UserType",
+              "name": "userType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bool",
+              "name": "isRegistered",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "licenseNumber",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "isVerified",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct UserContract.User",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}
